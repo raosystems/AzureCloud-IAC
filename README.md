@@ -22,11 +22,22 @@ A workflow is included at `.github/workflows/vm-deploy.yml` to deploy this Azure
 
 ### Required repository secrets
 
-- `AZURE_CREDENTIALS`
+- `AZURE_CREDENTIALS` (Azure service principal JSON credentials)
 - `AZURE_SUBSCRIPTION_ID`
 - `AZURE_CLIENT_ID`
 - `AZURE_CLIENT_SECRET`
 - `AZURE_TENANT_ID`
+
+### How to create `AZURE_CREDENTIALS`
+
+Use Azure CLI and store the output as a repository secret:
+
+```bash
+az ad sp create-for-rbac --name "github-actions-terraform" --role Contributor --scopes "/subscriptions/<SUBSCRIPTION_ID>" --sdk-auth
+```
+```
+
+Then paste the JSON output into `AZURE_CREDENTIALS`.
 
 ### How to use
 
