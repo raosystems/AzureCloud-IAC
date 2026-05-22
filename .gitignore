@@ -36,6 +36,42 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# Ignore Terraform.exe executable files.
+# Ignore Terraform executable files (use system terraform or tfenv instead)
 terraform.exe
 *terraform.exe
+*.exe
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+
+# Terraform lock file (optional - keep for reproducibility)
+# .terraform.lock.hcl
+
+# Sensitive/Local files
+*.key
+*.pem
+*.pub
+local.tfvars
+secrets.tfvars
+
+# Build/Output directories
+dist/
+build/
+output/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
