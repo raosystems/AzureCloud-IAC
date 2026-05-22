@@ -36,6 +36,6 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# Ignore Terraform.exe executable files
+# Ignore Terraform.exe executable files.
 terraform.exe
 *terraform.exe
