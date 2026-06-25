@@ -1,7 +1,0 @@
-# Service Principal Credentials (DO NOT COMMIT THIS FILE TO VERSION CONTROL)
-# Create a .tfvars file with your actual values and add it to .gitignore
-
-subscription_id = "226d88f3-aab1-4a83-bd7e-3fcad3dd64a3"
-client_id       = "eda7c9e4-0b57-43a2-979a-4270234d2694"
-client_secret   = "z3Q8Q~mvQKLxijavaBjhnFn5kswR72CVysaGAaQW"
-tenant_id       = "c77f76be-ad8b-4faa-af35-d8c12b96b050"
