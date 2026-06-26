@@ -1,3 +1,4 @@
+## Variable Section for Service Principal Credentials
 variable "subscription_id" {
   description = "The Azure Subscription ID"
   type        = string
@@ -22,17 +23,26 @@ variable "tenant_id" {
   sensitive   = true
 }
 
+## Variable Section for Resource Group for Virtual Machines
 variable "resource_group_name_for_vm" {
   description = "The name of the Azure Resource Group for Virtual Machines"
   type        = string
 }
 
-variable "resource_group_location" {
+## Variable Section for Resource Group for Storage 
+variable "resource_group_name_for_storage" {
+  description = "The name of the Azure Resource Group for Storage"
+  type        = string
+}
+
+## Variable Section for Resource Location
+variable "resource_location_east_us_2" {
   description = "The location of the Azure Resource Group for Virtual Machines"
   type        = string
   default     = "East US 2"
 }
 
+#Variable Section for TAGS
 variable "CreatedBy" {
   description = "The name of the person who created the resource group"
   type        = string
