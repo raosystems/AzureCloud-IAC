@@ -35,6 +35,12 @@ variable "resource_group_name_for_storage" {
   type        = string
 }
 
+## Variable Section for Resource Group for Active Directory
+variable "resource_group_name_for_active_directory" {
+  description = "The name of the Azure Resource Group for Active Directory"
+  type        = string
+}
+
 ## Variable Section for Resource Location
 variable "resource_location_east_us_2" {
   description = "The location of the Azure Resource Group for Virtual Machines"
