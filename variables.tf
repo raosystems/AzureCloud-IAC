@@ -41,6 +41,12 @@ variable "resource_group_name_for_active_directory" {
   type        = string
 }
 
+## Variable Section for Resource Group for Database
+variable "resource_group_name_for_database" {
+  description = "The name of the Azure Resource Group for Database"
+  type        = string
+}
+
 ## Variable Section for Resource Location
 variable "resource_location_east_us_2" {
   description = "The location of the Azure Resource Group for Virtual Machines"
