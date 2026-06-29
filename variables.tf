@@ -1,4 +1,4 @@
-## Variable Section for Service Principal Credentials
+## Variable Block to declare Service Principal Credentials; Subscription ID, Client ID, Client Secret, and Tenant ID
 variable "subscription_id" {
   description = "The Azure Subscription ID"
   type        = string
@@ -23,45 +23,104 @@ variable "tenant_id" {
   sensitive   = true
 }
 
-## Variable Section for Resource Group for Virtual Machines
-variable "resource_group_name_for_vm" {
-  description = "The name of the Azure Resource Group for Virtual Machines"
+
+##---------------------------------------------------------------------------##
+## Variable Block to declate Multiple Resource Groups for Azure Cloud Resources; 
+## Virtual Machines, Storage, Active Directory, Database, and Function App 
+variable "resource_group_name_for_automation" {
+  description = "The name of the Azure Resource Group for Automation"
   type        = string
 }
 
-## Variable Section for Resource Group for Storage 
-variable "resource_group_name_for_storage" {
-  description = "The name of the Azure Resource Group for Storage"
+variable "resource_group_name_for_avd" {
+  description = "The name of the Azure Resource Group for AVD"
   type        = string
 }
 
-## Variable Section for Resource Group for Active Directory
-variable "resource_group_name_for_active_directory" {
-  description = "The name of the Azure Resource Group for Active Directory"
-  type        = string
-}
-
-## Variable Section for Resource Group for Database
 variable "resource_group_name_for_database" {
   description = "The name of the Azure Resource Group for Database"
   type        = string
 }
 
-## Variable Section for Resource Location
-variable "resource_location_east_us_2" {
-  description = "The location of the Azure Resource Group for Virtual Machines"
+variable "resource_group_name_for_firewall" {
+  description = "The name of the Azure Resource Group for Firewall"
   type        = string
-  default     = "East US 2"
 }
 
-#Variable Section for TAGS
+variable "resource_group_name_for_function_app" {
+  description = "The name of the Azure Resource Group for Function App"
+  type        = string
+}
+
+variable "resource_group_name_for_loadbalancer" {
+  description = "The name of the Azure Resource Group for Load Balancer"
+  type        = string
+}
+
+variable "resource_group_name_for_logicapp" {
+  description = "The name of the Azure Resource Group for Logic App"
+  type        = string
+}
+
+variable "resource_group_name_for_netappfiles" {
+  description = "The name of the Azure Resource Group for NetApp Files"
+  type        = string
+}
+
+variable "resource_group_name_for_network" {
+  description = "The name of the Azure Resource Group for Network"
+  type        = string
+}
+
+variable "resource_group_name_for_privatedns" {
+  description = "The name of the Azure Resource Group for Private DNS"
+  type        = string
+}
+
+variable "resource_group_name_for_storage" {
+  description = "The name of the Azure Resource Group for Storage"
+  type        = string
+}
+
+variable "resource_group_name_for_vm" {
+  description = "The name of the Azure Resource Group for Virtual Machines"
+  type        = string
+}
+
+variable "resource_group_name_for_webapp" {
+  description = "The name of the Azure Resource Group for Web App"
+  type        = string
+}
+
+
+##---------------------------------------------------------------------------##
+## Variable Block to declare variables for TAGS
+variable "CostCenter" {
+  description = "The cost center associated with the resource group"
+  type        = string
+}
+
 variable "CreatedBy" {
   description = "The name of the person who created the resource group"
   type        = string
 }
 
-variable "CostCenter" {
-  description = "The cost center associated with the resource group"
+variable "Environment-Prod" {
+  description = "The production environment for the resource group"
+  type        = string
+}
+
+variable "Environment-Dev-Test" {
+  description = "The Dev-Test environment for the resource group"
+  type        = string
+}
+
+variable "ResourceOwner" {
+  description = "The name of the person or team responsible for the resource group"
+  type        = string
+}
+variable "SupportTeam-CloudEnggTeam" {
+  description = "The name of the support team responsible for the resource group"
   type        = string
 }
 
@@ -70,7 +129,22 @@ variable "ManagedBy" {
   type        = string
 }
 
-variable "Environment" {
-  description = "The environment for the resource group (e.g., Production, Development)"
+/*variable "CreatedDate" {
+  description = "The date when the resource group was created"
   type        = string
+}*/
+
+
+##---------------------------------------------------------------------------##
+## Variable Block to declate Azure Cloud Resource Locations
+variable "ResourceLocation_EastUs2" {
+  description = "The location of the Azure Resources deployed in Region East US 2"
+  type        = string
+  default     = "East US 2"
+}
+
+variable "ResourceLocation_CentralUS" {
+  description = "The location of the Azure Resources deployed in Region Central US"
+  type        = string
+  default     = "Central US"
 }
