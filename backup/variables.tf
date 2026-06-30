@@ -24,7 +24,7 @@ variable "tenant_id" {
 }
 
 
-/*##---------------------------------------------------------------------------##
+##---------------------------------------------------------------------------##
 ## Variable Block to declate Multiple Resource Groups for Azure Cloud Resources; 
 ## Virtual Machines, Storage, Active Directory, Database, and Function App 
 variable "resource_group_name_for_automation" {
@@ -91,7 +91,7 @@ variable "resource_group_name_for_webapp" {
   description = "The name of the Azure Resource Group for Web App"
   type        = string
 }
-*/
+
 
 ##---------------------------------------------------------------------------##
 ## Variable Block to declare variables for TAGS
@@ -132,30 +132,8 @@ variable "ManagedBy" {
 /*variable "CreatedDate" {
   description = "The date when the resource group was created"
   type        = string
-}
-*/
+}*/
 
-variable "resource_groups_east_us_2" {
-  description = "the variable section to declare resource groups in east us 2 region"
-  type        = map(string)
-
-  default = {
-    rg1-automation   = "east us 2"
-    rg1-avd          = "east us 2"
-    rg1-database     = "east us 2"
-    rg1-firewall     = "east us 2"
-    rg1-functionapp  = "east us 2"
-    rg1-loadbalancer = "east us 2"
-    rg1-logicapp     = "east us 2"
-    rg1-netappfiles  = "east us 2"
-    rg1-network      = "east us 2"
-    rg1-privatedns   = "east us 2"
-    rg1-storage      = "east us 2"
-    rg1-vm           = "east us 2"
-    rg1-webapp       = "east us 2"
-  }
-
-}
 
 ##---------------------------------------------------------------------------##
 ## Variable Block to declate Azure Cloud Resource Locations
@@ -165,7 +143,7 @@ variable "ResourceLocation_EastUs2" {
   default     = "East US 2"
 }
 
-variable "ResourceLocation_CentralUs" {
+variable "ResourceLocation_CentralUS" {
   description = "The location of the Azure Resources deployed in Region Central US"
   type        = string
   default     = "Central US"
