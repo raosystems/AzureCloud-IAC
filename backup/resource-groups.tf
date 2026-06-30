@@ -1,17 +1,4 @@
-
-resource "azurerm_resource_group" "rg" {
-  for_each = var.resource_groups_east_us_2
-
-  name     = each.key
-  location = each.value
-  tags     = local.common_tags
-  #    Environment = each.value == "east us 2" ? "east us 2" : "central us"
-  #    ManagedBy   = "Terraform"
-}
-
-
-
-/*### Common Block for Azure Resource Groups for Azure Resources
+### Common Block for Azure Resource Groups for Azure Resources
 resource "azurerm_resource_group" "rg1_for_automation" {
   name     = var.resource_group_name_for_automation
   location = var.ResourceLocation_EastUs2
@@ -88,4 +75,4 @@ resource "azurerm_resource_group" "rg1_for_webapp" {
   name     = var.resource_group_name_for_webapp
   location = var.ResourceLocation_EastUs2
   tags     = local.common_tags
-}*/
+}
