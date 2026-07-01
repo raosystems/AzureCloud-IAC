@@ -1,4 +1,14 @@
 # 🏗️ AzureCloud-IAC
+--> Variable pass method during Terraform Plan or Terraform Apply or terraform Destroy commands
+Examples:-
+
+Terraform Plan:-
+terraform plan -var="environment=prod" --var-file=".\environments/prod/terraform-prod.tfvars"                
+
+Terraform Apply:-
+terraform apply -var="environment=prod" --var-file=".\environments/prod/terraform-prod.tfvars" --auto-approve
+--------------------------------------------------------------------------------------------------------------
+
 
 Azure Cloud Infrastructure as Code Repository - Deploy and manage Azure resources using Terraform.
 
