@@ -1,22 +1,11 @@
-/*output "resource_group_name_for_vm" {
-  value = azurerm_resource_group.rg1_for_vm.id
-}
-
-output "resource_group_name_for_storage" {
-  value = azurerm_resource_group.rg1_for_storage.id
-}
-
-output "vm_resource_location_east_us_2" {
-  value = azurerm_resource_group.rg1_for_vm.location
-}
-
-output "storage_resource_location_east_us_2" {
-  value = azurerm_resource_group.rg1_for_storage.location
-}
-*/
-
-output "resource_group_names" {
+output "resource_group_names_eastus2" {
   value = [
-    for rg in azurerm_resource_group.rg : rg.name
+    for rg-eastus2 in azurerm_resource_group.rg-eastus2 : rg-eastus2.name
   ]
 }
+
+/*output "resource_group_names_centralus" {
+  value = [
+    for rg-centralus in azurerm_resource_group.rg-centralus : rg-centralus.name
+  ]
+}*/
